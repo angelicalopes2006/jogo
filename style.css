@@ -39,7 +39,11 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
-    ;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+}
+.card:hover .card__content{
+    transform: rotateY(180deg);
 }
 
 .card__content h3{
@@ -51,9 +55,10 @@ body{
     margin:0.6rem;
     border-radius:0.6rem;
     font-size: 1.5vw;
+    backface-visibility: hidden;
 }
 .card__content__question{
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     font-size: 1,5rem;
 }
 
@@ -61,8 +66,12 @@ body{
     margin: 1rem;
     padding: 1.3rem;
 }
+.card__content__question,
 .card__content__answer{
-    font-size: 1.5rem;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 footer{
