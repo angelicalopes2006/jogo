@@ -5,29 +5,28 @@
 }
 
 :root{
-    --font-destaque:  "Prociono", serif;
-    --font-texto: "Pacifico", cursive;
-    --cor1: #250902ff;
-    --cor2: #38040eff;
-    --cor3: #640d14ff;
-    --cor4: #800e13ff;
-    --cor5: #ad2831ff;
+    --font-destaque:  "Danfo", serif;
+    --font-texto: "Pacifico", serif;
+    --cor1: rgb(6, 7, 7);
+    --cor2: rgb(68, 2, 15);
+    --cor3: rgb(97, 13, 20);
+    --cor4: rgb(150, 6, 6);
+    --cor5: rgb(243, 5, 5);
+    --cor6: 000000;
 }
 body{
+    background-color: var(--cor5) ;
     font-family: var(--font-texto);
-    background-image: url(´img/34386132_18248240217.jpg`);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: var(--cor1);
 }
-
-#contaíner{
+#caixa{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 2rem;
 }
-
-.card{
-    margin: 1rem 1rem;
+.cartao{
+    margin: 1rem;
     background-color: var(--cor2);
     height: 20rem;
     flex-grow: 1;
@@ -47,9 +46,10 @@ body{
 }
 
 .card__content h3{
-    border: 3x solid var(--cor1)
-    font-family: var(--font-title);
-    text-aling: center;
+    border: 2x solid var(--cor3);
+    color: var(--cor5);
+    font-family: var(--font-texto);
+    text-align: center;
     padding: 0.5rem;
     position: absolute;
     margin:0.6rem;
@@ -57,35 +57,37 @@ body{
     font-size: 1.5vw;
     backface-visibility: hidden;
 }
-.card__content__question{
-    margin-top: 2.5rem;
+.cartao__conteudo__pergunta{
     font-size: 1,5rem;
+    margin: 2.5rem;
 }
-
-.card__content p{
-    margin: 1rem;
-    padding: 1.3rem;
-}
-.card__content__question,
-.card__content__answer{
+cartao__conteudo__pergunta,
+.cartao__conteudo__resposta{
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
 }
-
+.cartao__conteudo p{
+    margin: 1rem;
+    padding: 1.3rem;
+}
+.cartao__conteudo__resposta{
+    font-size: 1.5rem;
+    transform: rotate(180deg);
+}
 footer{
     text-align: center;
     position: fixed;
     bottom: 0%;
     width: 100%;
-    background-color: var(--cor1);
+    background-color: var(--cor4);
+    padding: 1em;
 }
 
 footer p{
+    font-size: 1.2rem;
     color: var(--cor1);
-    font-size: 0.9rem;
-    margin: 0.8rem 0 1.2rem 0;
 }
 
 footer a{
