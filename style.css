@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Prociono&display=swap');
+
 *{
     margin:0;
-    padding: 0%;
+    padding: 0;
 }
 
 :root{
     --font-destaque:  "Danfo", serif;
     --font-texto: "Pacifico", serif;
-    --cor1: rgb(6, 7, 7);
-    --cor2: rgb(68, 2, 15);
-    --cor3: rgb(97, 13, 20);
-    --cor4: rgb(150, 6, 6);
-    --cor5: rgb(243, 5, 5);
-    --cor6: 000000;
+    --cor1: rgb(226, 235, 235);
+    --cor2: rgb(37, 113, 112);
+    --cor3: rgb(8, 136, 165);
+    --cor4: rgb(37, 84, 83);
+    --cor5: rgb(6, 219, 247);
 }
 body{
     background-color: var(--cor5) ;
@@ -33,7 +33,7 @@ body{
     flex-basis: calc(33% - 6rem);
 }
 
-.card__content{
+.cartao__conteudo{
     height: 100%;
     text-align: center;
     display: flex;
@@ -41,14 +41,14 @@ body{
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
 }
-.card:hover .card__content{
+.cartao:hover .cartao__conteudo{
     transform: rotateY(180deg);
 }
 
-.card__content h3{
-    border: 2x solid var(--cor3);
+.cartao__conteudo h3{
+    border: 2px solid var(--cor3);
     color: var(--cor5);
-    font-family: var(--font-texto);
+    font-family: var(--fonte-texto);
     text-align: center;
     padding: 0.5rem;
     position: absolute;
@@ -58,10 +58,11 @@ body{
     backface-visibility: hidden;
 }
 .cartao__conteudo__pergunta{
-    font-size: 1,5rem;
+    font-size: 1.5rem;
     margin: 2.5rem;
 }
-cartao__conteudo__pergunta,
+
+.cartao__conteudo__pergunta,
 .cartao__conteudo__resposta{
     backface-visibility: hidden;
     position: absolute;
@@ -74,12 +75,12 @@ cartao__conteudo__pergunta,
 }
 .cartao__conteudo__resposta{
     font-size: 1.5rem;
-    transform: rotate(180deg);
+    transform: rotateY(180deg);
 }
 footer{
     text-align: center;
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
     background-color: var(--cor4);
     padding: 1em;
